@@ -7,6 +7,7 @@ import { usedE1, usedE2 } from "./e.js";
 import { h } from "./h.js";
 import * as m from "./m";
 import {object as obj} from "./m";
+import cjs from "./cjs2";
 import * as o from "./o";
 import * as p from "./p";
 import * as q from "./q";
@@ -48,6 +49,8 @@ it("should handle 'm in n' case", () => {
 	expect(obj.aaa).toBe(true);
 	expect("not_here" in m.object).toBe(false);
 	expect("not_here" in obj).toBe(false);
+	expect("a" in cjs).toBe(true);
+	expect("c" in cjs).toBe(false);
 	expect("aaa" in o).toBe(true);
 	expect("aaa" in p).toBe(false);
 	expect("ccc" in m).toBe(false);
